@@ -23,6 +23,34 @@
 | Short-Cuts | 快捷键 |
 | ... | 其余全部中文 |
 
+## 下载
+
+最新版本请在 **Releases** 页面下载：`nesDS.nds`（已打补丁的完整汉化版，直接放进烧录卡即可用）。
+
+## 使用说明（重要）
+
+### 烧录卡与内核
+
+nesDS 依赖 **DLDI 驱动**读写 TF 卡（存档需要），不同烧录卡/内核支持情况不同：
+
+- **推荐**：能自动给 .nds 打 DLDI 补丁的内核（多数 R4 系列内核如 Wood R4、R4iMenu 均支持），直接把 `nesDS.nds` 放进 TF 卡即可运行
+- **手动打补丁**：如果出现「无法存档 / 读取不到 TF 卡 / 死机」，需要手动打 DLDI 补丁：
+  1. 去 http://dldi.drunkencoders.com/ 下载 `dlditool` 和对应你烧录卡的 DLDI 驱动文件
+  2. 命令：`dlditool xxx.dldi nesDS.nds`
+
+**作者实测环境**：R4iSDHC RTS LITE（2015 银卡）＋ R4iNP NEW 2.16 内核 ＋ R4iDSN DLDI 补丁，存档正常。
+
+### 存档说明
+
+- 游戏 SRAM 会自动保存到 TF 卡
+- **建议**：退出游戏时先回到 ROM 菜单再关机（原版作者也提示过，SRAM 可能在直接关机时丢失）
+
+### 按键操作
+
+- 触摸下屏呼出游戏内菜单
+- L / R：倒带 / 快进
+- X / A：Y / B 连发
+
 ## 构建
 
 需要 [devkitARM](https://devkitpro.org/)（r43+）：
@@ -32,13 +60,6 @@ make
 ```
 
 产物：`nesDS.nds`
-
-## 使用
-
-- 烧录卡（R4 等）需要打对应 DLDI 补丁
-- 触摸下屏呼出游戏内菜单
-- L / R：倒带 / 快进
-- X / A：Y / B 连发
 
 ## 与原版的差异
 
