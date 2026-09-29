@@ -1,0 +1,19 @@
+nesDS 中文汉化版 (nesDS-CN)
+============================
+
+本仓库内容基于原版 nesDS。
+
+原版版权声明（引自原版 NOTES.TXT）：
+
+    (License)
+    nesDS is released into the PUBLIC DOMAIN.  You may do anything you want with it.
+    If you make any changes you'd like to see added to the official version, please
+    let me know.
+    -- nesds@olimar.fea.st
+
+本修改版（汉化）同样以 PUBLIC DOMAIN（公有领域）方式发布。
+
+原始作者 (Credits)：
+    Coding: loopy, FluBBa
+    More code: Dwedit, tepples, kuwanger, chishm
+    Sound: Mamiya
